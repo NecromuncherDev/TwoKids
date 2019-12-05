@@ -720,6 +720,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: aj
       objectReference: {fileID: 0}
+    - target: {fileID: -6449302239883089296, guid: 89a0d2d10611af746a012d96e0375cf3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 89a0d2d10611af746a012d96e0375cf3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1060,11 +1065,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -6449302239883089296, guid: 89a0d2d10611af746a012d96e0375cf3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9006365394032064954, guid: 89a0d2d10611af746a012d96e0375cf3,
         type: 3}
       propertyPath: m_IsActive
@@ -1136,7 +1136,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e9154e485d59404aaa563e5c53802b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
