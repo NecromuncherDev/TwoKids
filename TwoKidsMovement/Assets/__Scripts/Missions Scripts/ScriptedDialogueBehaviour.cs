@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace VikingCrewTools.UI {
-	public class ScriptedDialogueBehaviour : MonoBehaviour {
+namespace VikingCrewTools.UI
+{
+    public class ScriptedDialogueBehaviour : MonoBehaviour
+    {
 
-       private int index;
+        private int index;
 
         [System.Serializable]
         public class DialogueLine
         {
-           
+
             [Tooltip("The transform doing the speaking. This could be a mouth, head or character transform depending on your scene")]
             public Transform speaker;
             [Tooltip("Time to delay from the previous message in the array")]
@@ -34,7 +36,7 @@ namespace VikingCrewTools.UI {
         // Use this for initialization
         private void Start()
         {
-            
+
             index = 0;
         }
         public void ChooseScript()
@@ -48,7 +50,7 @@ namespace VikingCrewTools.UI {
             {
                 Interacted(scriptWhile);
             }
-            else if (task != null &&  task.Finished)
+            else if (task != null && task.Finished)
             {
                 Interacted(scriptAfter);
             }
@@ -64,10 +66,10 @@ namespace VikingCrewTools.UI {
             }
             SpeechBubbleManager.Instance.AddSpeechBubble(script[index].speaker, script[index].line, script[index].speechBubbleType, bubbleTimeToLive, Color.white, Vector3.zero);
             index++;
-          
+
 
         }
 
 
     }
-} 
+}

@@ -13,7 +13,7 @@ public class TaskItem : MonoBehaviour
 
     public bool Finished = false;
 
-    bool talkTofinish;
+   public  bool talkTofinish;
 
     public int ID;
 
@@ -41,7 +41,7 @@ public class TaskItem : MonoBehaviour
 
     public void Intercacted()
     {
-        if (active)
+        if (active && talkTofinish)
         {
             UI.MarkTask(ID);
             active = false;

@@ -1771,6 +1771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3840896377671971567}
   - component: {fileID: 3840896377671971566}
+  - component: {fileID: 8720805204189874133}
   m_Layer: 0
   m_Name: Boy01_Brows_Geo
   m_TagString: Untagged
@@ -1915,6 +1916,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00000010430813, y: 0.82639927, z: 0.17207317}
     m_Extent: {x: 0.15205967, y: 0.069930315, z: 0.062526226}
   m_DirtyAABB: 0
+--- !u!114 &8720805204189874133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3840896377671971552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f45be94e2156424f908c1466eab0064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 3840896377671971552}
 --- !u!1 &3840896377672245146
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,7 +2777,7 @@ GameObject:
   - component: {fileID: 3840896378295118947}
   - component: {fileID: 3840896378295118948}
   m_Layer: 0
-  m_Name: ThirdPersonController
+  m_Name: ThirdPersonControllerAJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
