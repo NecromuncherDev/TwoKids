@@ -20,13 +20,18 @@ public class TaskItem : MonoBehaviour
     public event Action thisTaskStarted;
 
     public event Action thisTaskFinished;
-   
-    private UI_Maneger UI = UI_Maneger.instance;
+
+    public UI_Maneger UI = UI_Maneger.instance;
+
+    private void Awake()
+    {
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (active && destination == other)
-        {
+        {if (UI == null)
+                Debug.Log("fuck");
             UI.MarkTask(ID);
             active = false;
             Debug.Log(taskText);
