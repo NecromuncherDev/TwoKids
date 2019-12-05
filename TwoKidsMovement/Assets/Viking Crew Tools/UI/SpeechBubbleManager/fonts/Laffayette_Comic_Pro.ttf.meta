@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: c75f004e3f2187d46a0ad9fd1fac235f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 14
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Laffayette Comic Pro
+  fontNames:
+  - Laffayette Comic Pro
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4e555100b59a8ba43bcf2ff5f9995431, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
