@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.Serialization;
 
-namespace VikingCrewTools.UI {
+
 	public class SpeechBubbleBehaviour : MonoBehaviour {
         private float _timeToLive = 1f;
 
@@ -147,4 +147,3 @@ namespace VikingCrewTools.UI {
 
         
     }
-}

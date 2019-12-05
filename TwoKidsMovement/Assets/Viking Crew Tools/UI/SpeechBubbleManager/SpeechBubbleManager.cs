@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace VikingCrewTools.UI {
+
     public class SpeechBubbleManager : MonoBehaviour
     {
         public enum SpeechbubbleType
@@ -218,4 +218,3 @@ namespace VikingCrewTools.UI {
         }
 
     }
-}

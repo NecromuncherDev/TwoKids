@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace VikingCrewTools.UI {
+ 
     /// <summary>
     /// This layout group will set its padding based on ratio instead of pixels
     /// 
@@ -26,4 +26,4 @@ namespace VikingCrewTools.UI {
             base.CalculateLayoutInputHorizontal();
         }
     }
-}
+

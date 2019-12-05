@@ -25,6 +25,7 @@ public class UI_Maneger : MonoBehaviour
         else
             Destroy(this.gameObject);
 
+
         missions = GameManager.instance.missions;
         activeMission = 0;
         MissionManeger.MissionDone += NextMission;
