@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace VikingCrewTools.UI
-{
+
+
     public class ScriptedDialogueBehaviour : MonoBehaviour
     {
 
@@ -72,4 +72,3 @@ namespace VikingCrewTools.UI
 
 
     }
-}

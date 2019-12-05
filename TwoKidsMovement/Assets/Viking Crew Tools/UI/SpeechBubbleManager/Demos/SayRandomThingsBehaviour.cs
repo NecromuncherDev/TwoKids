@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using SpeechBubbleManager = VikingCrewTools.UI.SpeechBubbleManager;
 
-namespace VikingCrewDevelopment.Demos{
+
+
     public class SayRandomThingsBehaviour : MonoBehaviour {
         [Multiline]
         public string[] thingsToSay = new string[] { "Hello world" };
@@ -42,4 +42,3 @@ namespace VikingCrewDevelopment.Demos{
         }
         
     }
-}

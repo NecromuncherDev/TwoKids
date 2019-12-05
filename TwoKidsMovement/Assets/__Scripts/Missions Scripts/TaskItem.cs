@@ -2,8 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace VikingCrewTools.UI
-{
+
     public class TaskItem : MonoBehaviour
     {
         public string taskText;
@@ -28,6 +27,7 @@ namespace VikingCrewTools.UI
 
         private void Awake()
         {
+        if(GetComponent<ScriptedDialogueBehaviour>() != null)
             x = GetComponent<ScriptedDialogueBehaviour>().scriptWhile.Length;
         }
 
@@ -77,4 +77,3 @@ namespace VikingCrewTools.UI
         }
 
     }
-}
