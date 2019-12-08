@@ -2321,6 +2321,10 @@ MonoBehaviour:
     delay: 0
     line: while
     speechBubbleType: 0
+  - speaker: {fileID: 1479363334}
+    delay: 0
+    line: while works!
+    speechBubbleType: 0
   scriptAfter:
   - speaker: {fileID: 1332696769}
     delay: 0
@@ -2521,6 +2525,12 @@ Rigidbody:
 --- !u!1 &1479363333 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3840896377381993765, guid: afa17dc10cdf9074391ef75ffa3ed22b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1227401269}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1479363334 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3840896377381993764, guid: afa17dc10cdf9074391ef75ffa3ed22b,
     type: 3}
   m_PrefabInstance: {fileID: 1227401269}
   m_PrefabAsset: {fileID: 0}

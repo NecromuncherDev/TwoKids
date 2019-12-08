@@ -6,7 +6,6 @@ public class MoveArms : MonoBehaviour
 {
     [SerializeField]
     Rigidbody lShoulder, lArm, rShoulder, rArm;
-    
 
     [SerializeField]
     float moveSpeed, maxRot = 50, minRot =-50;
