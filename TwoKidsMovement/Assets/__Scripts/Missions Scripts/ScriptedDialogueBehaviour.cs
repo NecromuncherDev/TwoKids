@@ -64,9 +64,11 @@ using UnityEngine;
             {
                 index = 0;
             }
+        if (index < script.Length)
+        {
             SpeechBubbleManager.Instance.AddSpeechBubble(script[index].speaker, script[index].line, script[index].speechBubbleType, bubbleTimeToLive, Color.white, Vector3.zero);
             index++;
-
+        }
 
         }
 
