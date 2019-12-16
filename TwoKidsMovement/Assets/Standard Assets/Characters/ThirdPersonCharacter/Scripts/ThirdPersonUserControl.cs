@@ -7,6 +7,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     [RequireComponent(typeof (ThirdPersonCharacter))]
     public class ThirdPersonUserControl : MonoBehaviour
     {
+        public int playerNumber = 1;
+
         private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
         private Transform m_Cam;                  // A reference to the main camera in the scenes transform
         private Vector3 m_CamForward;             // The current forward direction of the camera
@@ -16,6 +18,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         
         private void Start()
         {
+
             // get the transform of the main camera
             if (Camera.main != null)
             {
@@ -46,8 +49,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private void FixedUpdate()
         {
             // read inputs
-            float h = CrossPlatformInputManager.GetAxis("Horizontal");
-            float v = CrossPlatformInputManager.GetAxis("Vertical");
+            float h = CrossPlatformInputManager.GetAxis("Joy" + (playerNumber + 1).ToString() + "XL");
+            float v = CrossPlatformInputManager.GetAxis("Joy" + (playerNumber + 1).ToString() + "YL");
             bool crouch = Input.GetKey(KeyCode.C);
 
             // calculate move direction to pass to character
