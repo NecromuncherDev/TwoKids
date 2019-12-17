@@ -47,8 +47,8 @@ public class MoveArms : MonoBehaviour
         lh = (lh == 0) ? lShoulder.transform.localRotation.normalized.y : lh;
         lv = (lv == 0) ? lShoulder.transform.localRotation.normalized.z : lv;
 
-        Debug.Log("rh: " + rh + ", rv: " + rv);
-        Debug.Log("lh: " + lh + ", lv: " + lv);
+        //Debug.Log("rh: " + rh + ", rv: " + rv);
+        //Debug.Log("lh: " + lh + ", lv: " + lv);
 
         Quaternion rotX = Quaternion.AngleAxis(0f, new Vector3(1, 0, 0));
         Quaternion rotYR = Quaternion.AngleAxis(rh * moveSpeed, new Vector3(0, 1, 0));
