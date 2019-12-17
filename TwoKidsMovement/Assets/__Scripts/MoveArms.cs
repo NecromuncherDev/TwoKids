@@ -11,7 +11,11 @@ public class MoveArms : MonoBehaviour
     [SerializeField]
     float moveSpeed, maxRot = 50, minRot =-50;
 
+    [SerializeField]
+    int topKidControler;
+
     float rh, rhRot, rv, rvRot, lh, lhRot, lv, lvRot;
+
 
     private void Start()
     {
@@ -31,49 +35,30 @@ public class MoveArms : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        #region Right arm
+        #region Arms
 
-        rh = CrossPlatformInputManager.GetAxis("Joy2XR");
-        rv = CrossPlatformInputManager.GetAxis("Joy2YR");
+        rh = CrossPlatformInputManager.GetAxis("Joy" + topKidControler + "XR");
+        rv = CrossPlatformInputManager.GetAxis("Joy" + topKidControler + "YR");
+        lh = CrossPlatformInputManager.GetAxis("Joy" + topKidControler + "XL");
+        lv = CrossPlatformInputManager.GetAxis("Joy" + topKidControler + "YL");
 
-        Debug.Log(rh + ", " + rv);
+        rh = (rh == 0) ? rShoulder.transform.localRotation.normalized.y : rh;
+        rv = (rv == 0) ? rShoulder.transform.localRotation.normalized.z : rv;
+        lh = (lh == 0) ? lShoulder.transform.localRotation.normalized.y : lh;
+        lv = (lv == 0) ? lShoulder.transform.localRotation.normalized.z : lv;
 
-        rhRot = rh * Time.deltaTime * moveSpeed;
-        rShoulder.transform.SetPositionAndRotation(rShoulder.transform.position,
-                                               new Quaternion(rShoulder.transform.rotation.x,
-                                                              Mathf.Clamp(rShoulder.transform.rotation.y + rhRot, minRot, maxRot),
-                                                              rShoulder.transform.rotation.z,
-                                                              rShoulder.transform.rotation.w));
+        Debug.Log("rh: " + rh + ", rv: " + rv);
+        Debug.Log("lh: " + lh + ", lv: " + lv);
 
-        rvRot = rv * Time.deltaTime * -moveSpeed;
-        rArm.transform.SetPositionAndRotation(rArm.transform.position,
-                                               new Quaternion(rArm.transform.rotation.x, 
-                                                              rArm.transform.rotation.y,
-                                                              Mathf.Clamp(rArm.transform.rotation.z + rvRot, minRot,maxRot),
-                                                              rArm.transform.rotation.w));
+        Quaternion rotX = Quaternion.AngleAxis(0f, new Vector3(1, 0, 0));
+        Quaternion rotYR = Quaternion.AngleAxis(rh * moveSpeed, new Vector3(0, 1, 0));
+        Quaternion rotZR = Quaternion.AngleAxis(rv * moveSpeed, new Vector3(0, 0, 1));
+        Quaternion rotYL = Quaternion.AngleAxis(lh * moveSpeed, new Vector3(0, 1, 0));
+        Quaternion rotZL = Quaternion.AngleAxis(lv * moveSpeed, new Vector3(0, 0, 1));
 
-        #endregion
+        rShoulder.transform.localRotation = rShoulder.transform.localRotation * rotX * rotYR * rotZR;
+        lShoulder.transform.localRotation = lShoulder.transform.localRotation * rotX * rotYL * rotZL;
 
-        #region Left arm
-
-        lh = CrossPlatformInputManager.GetAxis("Joy2XL");
-        lv = CrossPlatformInputManager.GetAxis("Joy2YL");
-
-        Debug.Log(rh + ", " + rv);
-
-        lhRot = lh * Time.deltaTime * moveSpeed;
-        lShoulder.transform.SetPositionAndRotation(lShoulder.transform.position,
-                                               new Quaternion(lShoulder.transform.rotation.x,
-                                                              Mathf.Clamp(lShoulder.transform.rotation.y + lhRot, minRot, maxRot),
-                                                              lShoulder.transform.rotation.z,
-                                                              lShoulder.transform.rotation.w));
-
-        lvRot = lv * Time.deltaTime * -moveSpeed;
-        lArm.transform.SetPositionAndRotation(lArm.transform.position,
-                                               new Quaternion(lArm.transform.rotation.x,
-                                                              lArm.transform.rotation.y,
-                                                              Mathf.Clamp(lArm.transform.rotation.z + lvRot, minRot, maxRot),
-                                                              lArm.transform.rotation.w));
-        #endregion
+        #endregion 
     }
 }

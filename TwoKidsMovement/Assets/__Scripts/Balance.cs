@@ -46,6 +46,6 @@ public class Balance : MonoBehaviour
 
     float findBalanceDist()
     {
-        return  Mathf.Clamp(((( rHand.position - center.position ) + ( lHand.position - center.position)/2).magnitude * 255 + botKid.velocity.magnitude * 10),0f,255f);
+        return  Mathf.Clamp(((( rHand.position - center.position ) + ( lHand.position - center.position)/2).magnitude * 255 + botKid.velocity.magnitude),0f,255f);
     }
 }

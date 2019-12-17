@@ -16,12 +16,9 @@ public class BreakKids: MonoBehaviour
     void OnJointBreak(float breakForce)
     {
         Debug.Log("A joint has just been broken!, force: " + breakForce);
-        //isBroken = true;
         realRootParent.SetParent(null);
         GameObject newKid = Instantiate(botKidPrefab, Vector3.zero ,Quaternion.identity);
-        newKid.GetComponent<ThirdPersonUserControl>().playerNumber = 1;
-        //newKid.transform.RotateAroundLocal(newKid.transform.up, 180 * Mathf.Deg2Rad);
-        //newKid.AddComponent<BreakKids>();
+        newKid.GetComponent<ThirdPersonUserControl>().playerNumber = 0;
         Destroy(realRootParent.gameObject);
     }
 }
