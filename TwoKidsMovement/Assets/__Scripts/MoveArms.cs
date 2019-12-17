@@ -40,7 +40,7 @@ public class MoveArms : MonoBehaviour
         rh = CrossPlatformInputManager.GetAxis("Joy" + topKidControler + "XR");
         rv = CrossPlatformInputManager.GetAxis("Joy" + topKidControler + "YR");
         lh = CrossPlatformInputManager.GetAxis("Joy" + topKidControler + "XL");
-        lv = CrossPlatformInputManager.GetAxis("Joy" + topKidControler + "YL");
+        lv = -CrossPlatformInputManager.GetAxis("Joy" + topKidControler + "YL");
 
         rh = (rh == 0) ? rShoulder.transform.localRotation.normalized.y : rh;
         rv = (rv == 0) ? rShoulder.transform.localRotation.normalized.z : rv;
